@@ -5,7 +5,9 @@ import { ArrowDown } from "lucide-react";
 const Section = ({ id, title, text, img, reverse }) => (
   <section
     id={id}
-    className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
+    className={`flex flex-col ${
+      reverse ? "md:flex-row-reverse" : "md:flex-row"
+    } items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
   >
     <div className="md:w-1/2 text-center md:text-left">
       <h2 className="text-4xl font-bold mb-4 bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent">
@@ -33,7 +35,10 @@ const SideScroller = () => {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          if (
+            rect.top <= window.innerHeight / 2 &&
+            rect.bottom >= window.innerHeight / 2
+          ) {
             setActive(id);
           }
         }
@@ -49,7 +54,9 @@ const SideScroller = () => {
         <a
           key={id}
           href={`#${id}`}
-          className={`w-3 h-3 rounded-full border-2 border-sky-500 transition-all duration-300 ${active === id ? "bg-sky-500 scale-125" : "bg-white hover:bg-sky-300"}`}
+          className={`w-3 h-3 rounded-full border-2 border-sky-500 transition-all duration-300 ${
+            active === id ? "bg-sky-500 scale-125" : "bg-white hover:bg-sky-300"
+          }`}
           aria-label={`Navigate to ${id}`}
         />
       ))}
@@ -64,33 +71,33 @@ const Home = () => {
     <div className="relative">
       <SideScroller />
 
-      {/* ⭐ UPDATED HEADER WITH LOGIN/SIGNUP BUTTONS ⭐ */}
-      <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-
-          {/* Left Dummy Space for Balance (Important for center logo) */}
-          <div className="w-1/3"></div>
+      {/* ⭐ RESPONSIVE HEADER WITH FIX ⭐ */}
+      <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-3 shadow-md z-50">
+        <div className="max-w-7xl mx-auto flex items-center justify-between md:justify-center">
 
           {/* Center Logo */}
-          <div className="w-1/3 flex justify-center">
+          <div className="flex-1 flex justify-center">
             <img
               src="/logo.jpeg"
               alt="RONIX Logo"
-              className="h-16 sm:h-24 object-contain cursor-pointer"
+              className="h-12 sm:h-16 md:h-20 object-contain cursor-pointer"
             />
           </div>
 
-          {/* Right Side Login & Signup */}
-          <div className="w-1/3 flex justify-end items-center gap-4">
+          {/* Login & Signup */}
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 md:static md:translate-y-0 flex items-center gap-2 sm:gap-4">
             <Link
               to="/"
-              className="px-4 py-2 border-2 border-[#5AB5F3] text-[#5AB5F3] font-semibold rounded-lg hover:bg-[#5AB5F3] hover:text-white transition-all text-sm sm:text-base"
+              className="px-3 py-1 border-2 border-[#5AB5F3] text-[#5AB5F3] font-semibold rounded-lg 
+              hover:bg-[#5AB5F3] hover:text-white transition-all text-xs sm:text-sm md:text-base"
             >
               Login
             </Link>
+
             <Link
               to="/signup"
-              className="px-4 py-2 bg-[#5AB5F3] text-white font-semibold rounded-lg hover:bg-[#28a0f0] transition-all text-sm sm:text-base"
+              className="px-3 py-1 bg-[#5AB5F3] text-white font-semibold rounded-lg 
+              hover:bg-[#28a0f0] transition-all text-xs sm:text-sm md:text-base"
             >
               Signup
             </Link>
@@ -100,7 +107,10 @@ const Home = () => {
       </div>
       {/* END HEADER */}
 
-      <section id="home" className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50">
+      <section
+        id="home"
+        className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50"
+      >
         <div className="flex flex-wrap justify-center gap-6 sm:gap-12 md:gap-16 mb-12 font-extrabold text-base sm:text-lg md:text-xl uppercase tracking-wider text-black">
           <Link to="/design" className="hover:text-[#5AB5F3] transition-colors">DESIGN</Link>
           <Link to="/develop" className="hover:text-[#5AB5F3] transition-colors">DEVELOP</Link>
@@ -139,7 +149,6 @@ const Home = () => {
             CONTACT
           </Link>
         </div>
-
       </section>
 
       <Section
@@ -165,8 +174,12 @@ const Home = () => {
       />
 
       <div className="sm:hidden fixed bottom-0 left-0 right-0 bg-white flex justify-around py-4 z-50 text-black">
-        <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#5AB5F3] transition-colors">PORTFOLIO</Link>
-        <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#5AB5F3] transition-colors">CONTACT</Link>
+        <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#5AB5F3] transition-colors">
+          PORTFOLIO
+        </Link>
+        <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#5AB5F3] transition-colors">
+          CONTACT
+        </Link>
       </div>
     </div>
   );

@@ -13,6 +13,7 @@ function App() {
     <div className="bg-white min-h-screen flex flex-col">
       <div className="flex-1">
         <Routes>
+          <Route path="/" element={<Home />} />   {/* DEFAULT ROUTE */}
           <Route path="/home" element={<Home />} />
           <Route path="/design" element={<Design />} />
           <Route path="/develop" element={<Develop />} />

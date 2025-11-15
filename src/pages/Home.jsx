@@ -64,11 +64,41 @@ const Home = () => {
     <div className="relative">
       <SideScroller />
 
+      {/* ⭐ UPDATED HEADER WITH LOGIN/SIGNUP BUTTONS ⭐ */}
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
-        <div className="max-w-7xl mx-auto flex justify-center items-center">
-          <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-30 object-contain" />
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+
+          {/* Left Dummy Space for Balance (Important for center logo) */}
+          <div className="w-1/3"></div>
+
+          {/* Center Logo */}
+          <div className="w-1/3 flex justify-center">
+            <img
+              src="/logo.jpeg"
+              alt="RONIX Logo"
+              className="h-16 sm:h-24 object-contain cursor-pointer"
+            />
+          </div>
+
+          {/* Right Side Login & Signup */}
+          <div className="w-1/3 flex justify-end items-center gap-4">
+            <Link
+              to="/"
+              className="px-4 py-2 border-2 border-[#5AB5F3] text-[#5AB5F3] font-semibold rounded-lg hover:bg-[#5AB5F3] hover:text-white transition-all text-sm sm:text-base"
+            >
+              Login
+            </Link>
+            <Link
+              to="/signup"
+              className="px-4 py-2 bg-[#5AB5F3] text-white font-semibold rounded-lg hover:bg-[#28a0f0] transition-all text-sm sm:text-base"
+            >
+              Signup
+            </Link>
+          </div>
+
         </div>
       </div>
+      {/* END HEADER */}
 
       <section id="home" className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50">
         <div className="flex flex-wrap justify-center gap-6 sm:gap-12 md:gap-16 mb-12 font-extrabold text-base sm:text-lg md:text-xl uppercase tracking-wider text-black">

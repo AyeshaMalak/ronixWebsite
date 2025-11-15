@@ -7,19 +7,23 @@ import Develop from "./pages/Develop";
 import Market from "./pages/Market";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
     <div className="bg-white min-h-screen flex flex-col">
       <div className="flex-1">
         <Routes>
-          <Route path="/" element={<Home />} />   {/* DEFAULT ROUTE */}
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/design" element={<Design />} />
           <Route path="/develop" element={<Develop />} />
           <Route path="/market" element={<Market />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
 

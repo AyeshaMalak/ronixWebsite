@@ -71,33 +71,41 @@ const Home = () => {
     <div className="relative">
       <SideScroller />
 
-      {/* ⭐ RESPONSIVE HEADER WITH FIX ⭐ */}
-      <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-3 shadow-md z-50">
-        <div className="max-w-7xl mx-auto flex items-center justify-between md:justify-center">
+      {/* ⭐ PERFECT RESPONSIVE HEADER ⭐ */}
+      <div className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center relative">
 
-          {/* Center Logo */}
-          <div className="flex-1 flex justify-center">
-            <img
-              src="/logo.jpeg"
-              alt="RONIX Logo"
-              className="h-12 sm:h-16 md:h-20 object-contain cursor-pointer"
-            />
+          {/* LEFT SIDE (Desktop balance spacer) */}
+          <div className="hidden md:block w-1/3"></div>
+
+          {/* CENTER LOGO */}
+          <div className="w-full md:w-1/3 flex justify-center">
+            <Link to="/home">
+              <img
+                src="/logo.jpeg"
+                alt="RONIX Logo"
+                className="h-12 sm:h-16 md:h-20 object-contain cursor-pointer"
+              />
+            </Link>
           </div>
 
-          {/* Login & Signup */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 md:static md:translate-y-0 flex items-center gap-2 sm:gap-4">
+          {/* RIGHT SIDE BUTTONS */}
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 md:static md:translate-y-0 
+                          md:w-1/3 flex justify-end items-center gap-3">
+
             <Link
-              to="/"
-              className="px-3 py-1 border-2 border-[#5AB5F3] text-[#5AB5F3] font-semibold rounded-lg 
-              hover:bg-[#5AB5F3] hover:text-white transition-all text-xs sm:text-sm md:text-base"
+              to="/login"
+              className="px-3 py-1 sm:px-4 sm:py-2 border-2 border-[#5AB5F3] 
+                         text-[#5AB5F3] font-semibold rounded-lg text-xs sm:text-sm 
+                         hover:bg-[#5AB5F3] hover:text-white transition-all"
             >
               Login
             </Link>
 
             <Link
               to="/signup"
-              className="px-3 py-1 bg-[#5AB5F3] text-white font-semibold rounded-lg 
-              hover:bg-[#28a0f0] transition-all text-xs sm:text-sm md:text-base"
+              className="px-3 py-1 sm:px-4 sm:py-2 bg-[#5AB5F3] text-white font-semibold 
+                         rounded-lg text-xs sm:text-sm hover:bg-[#28a0f0] transition-all"
             >
               Signup
             </Link>

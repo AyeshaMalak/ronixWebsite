@@ -1,3 +1,4 @@
+
 import { Routes, Route, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 
@@ -7,19 +8,14 @@ import Develop from "./pages/Develop";
 import Market from "./pages/Market";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
 
 function App() {
-  const noFooterPaths = ["/", "/signup"];
-  const location = useLocation(); 
+  const location = useLocation();
 
   return (
     <div className="bg-white min-h-screen flex flex-col">
       <div className="flex-1">
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
           <Route path="/home" element={<Home />} />
           <Route path="/design" element={<Design />} />
           <Route path="/develop" element={<Develop />} />
@@ -29,8 +25,8 @@ function App() {
         </Routes>
       </div>
 
-    
-      {!noFooterPaths.includes(location.pathname) && <Footer />}
+      
+      <Footer />
     </div>
   );
 }

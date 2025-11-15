@@ -1,5 +1,4 @@
-
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
@@ -10,8 +9,6 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 
 function App() {
-  const location = useLocation();
-
   return (
     <div className="bg-white min-h-screen flex flex-col">
       <div className="flex-1">
@@ -25,7 +22,6 @@ function App() {
         </Routes>
       </div>
 
-      
       <Footer />
     </div>
   );

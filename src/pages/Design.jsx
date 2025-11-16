@@ -19,18 +19,16 @@ const Design = () => {
       <div className="h-24"></div>
 
       <div className="space-y-12 px-6 md:px-24 pb-20">
-        <div className="bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8 mt-18">
+        {/* First Section with Cyan Heading */}
+        <div className="bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8 mt-10">
           <div className="md:w-1/2">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-snug text-[#00D4FF]">
               Brand Identity
             </h2>
-
-            <p className="text-gray-800 leading-relaxed text-lg">
-              We create strong brand identities that elevate your business globally.
-              Clear and memorable designs for maximum impact.
+            <p className="text-black leading-relaxed text-lg">
+              We create strong brand identities that elevate your business globally. Clear and memorable designs for maximum impact.
             </p>
           </div>
-
           <div className="md:w-1/2 flex justify-center">
             <img
               src="/image3.png"
@@ -40,6 +38,7 @@ const Design = () => {
           </div>
         </div>
 
+        {/* Other Sections with Black Headings */}
         <Section
           title="Brand Guidelines"
           text="Every brand is unique. We carefully choose colors and fonts for consistency."
@@ -79,7 +78,7 @@ const Design = () => {
 
 const Section = ({ title, text }) => (
   <div className="bg-gray-100 p-8 rounded-lg shadow-md">
-    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-[#00D4FF]">{title}</h2>
+    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-black">{title}</h2>
     <p className="text-gray-800 leading-relaxed text-lg">{text}</p>
   </div>
 );

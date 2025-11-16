@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowDown } from "lucide-react";
 
-
-const gradientText = "bg-gradient-to-b from-[#00C6FF] via-[#00A8FF] to-[#007BFF] bg-clip-text text-transparent";
-
 const Section = ({ id, title, text, img, reverse }) => (
   <section
     id={id}
@@ -13,10 +10,9 @@ const Section = ({ id, title, text, img, reverse }) => (
     } items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
   >
     <div className="md:w-1/2 text-center md:text-left">
-      <h2 className={`text-4xl font-extrabold mb-4 ${gradientText} tracking-wide`}>
+      <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-b from-[#19D3FF] to-[#0084FF] bg-clip-text text-transparent tracking-wide">
         {title}
       </h2>
-
       <p className="text-lg leading-relaxed text-gray-700">{text}</p>
     </div>
 
@@ -49,7 +45,6 @@ const SideScroller = () => {
         }
       });
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -60,11 +55,10 @@ const SideScroller = () => {
         <a
           key={id}
           href={`#${id}`}
-          className={`w-3 h-3 rounded-full border-2 border-[#00A8FF] transition-all duration-300 ${
-            active === id
-              ? "bg-[#00A8FF] scale-125"
-              : "bg-white hover:bg-[#00C6FF]"
+          className={`w-3 h-3 rounded-full border-2 border-[#0084FF] transition-all duration-300 ${
+            active === id ? "bg-[#0084FF] scale-125" : "bg-white hover:bg-[#19D3FF]"
           }`}
+          aria-label={`Navigate to ${id}`}
         />
       ))}
     </div>
@@ -76,7 +70,6 @@ const Home = () => {
 
   return (
     <div className="relative">
-
       <SideScroller />
 
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
@@ -90,14 +83,12 @@ const Home = () => {
         className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50"
       >
         <div className="flex flex-wrap justify-center gap-6 sm:gap-12 md:gap-16 mb-12 font-extrabold text-base sm:text-lg md:text-xl uppercase tracking-wider text-black">
-          <Link to="/design" className="hover:text-[#00A8FF] transition-colors">DESIGN</Link>
-          <Link to="/develop" className="hover:text-[#00A8FF] transition-colors">DEVELOP</Link>
-          <Link to="/market" className="hover:text-[#00A8FF] transition-colors">MARKET</Link>
+          <Link to="/design" className="hover:text-[#0084FF] transition-colors">DESIGN</Link>
+          <Link to="/develop" className="hover:text-[#0084FF] transition-colors">DEVELOP</Link>
+          <Link to="/market" className="hover:text-[#0084FF] transition-colors">MARKET</Link>
         </div>
 
-        <h1
-          className={`font-black text-[20vw] sm:text-[15vw] md:text-[12vw] lg:text-[10vw] xl:text-[200px] leading-none mb-8 text-center ${gradientText} tracking-wide`}
-        >
+        <h1 className="font-black text-[20vw] sm:text-[15vw] md:text-[12vw] lg:text-[10vw] xl:text-[200px] leading-none mb-8 text-center bg-gradient-to-b from-[#19D3FF] to-[#0084FF] bg-clip-text text-transparent tracking-wide">
           RONIX
         </h1>
 
@@ -112,21 +103,19 @@ const Home = () => {
           onClick={() => navigate("/portfolio")}
         >
           <span className="font-bold">FEATURED WORK</span>
-
-          <ArrowDown className="mt-3 h-5 w-5 animate-bounce text-[#00A8FF]" />
+          <ArrowDown className="mt-3 h-5 w-5 animate-bounce text-[#0084FF]" />
         </div>
 
         <div className="fixed left-2 md:left-10 top-1/2 -translate-y-1/2 flex-col gap-12 md:gap-10 px-2 py-4 rounded-md z-50 hidden sm:flex text-black">
           <Link
             to="/portfolio"
-            className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#00A8FF] transition-colors"
+            className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#0084FF] transition-colors"
           >
             PORTFOLIO
           </Link>
-
           <Link
             to="/contact"
-            className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#00A8FF] transition-colors"
+            className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#0084FF] transition-colors"
           >
             CONTACT
           </Link>
@@ -156,11 +145,12 @@ const Home = () => {
       />
 
       <div className="sm:hidden fixed bottom-0 left-0 right-0 bg-white flex justify-around py-4 z-50 text-black">
-        <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#00A8FF] transition-colors">PORTFOLIO</Link>
-        <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#00A8FF] transition-colors">CONTACT</Link>
+        <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#0084FF] transition-colors">PORTFOLIO</Link>
+        <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#0084FF] transition-colors">CONTACT</Link>
       </div>
     </div>
   );
 };
 
 export default Home;
+      

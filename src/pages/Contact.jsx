@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <div className="bg-white text-gray-800 relative">
-      
+
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <Link to="/home">
@@ -15,7 +15,6 @@ const Contact = () => {
 
       <div className="h-20 sm:h-24"></div>
 
-      
       <section className="bg-gray-100 flex flex-col justify-center items-center text-center py-16 px-6 md:px-12 mt-10">
         <h1 className="text-4xl font-bold mb-2 text-gray-800">Contact</h1>
         <p className="italic text-gray-500">
@@ -23,7 +22,6 @@ const Contact = () => {
         </p>
       </section>
 
-      
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-6 pb-16 pt-12">
         <div className="bg-gray-100 p-10 shadow-sm rounded-lg">
           <h2 className="text-3xl font-extrabold mb-6">Get a Quote</h2>
@@ -75,14 +73,13 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="text-sky-500 font-bold hover:text-black transition-colors"
+              className="font-bold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent hover:text-black transition-colors"
             >
               Let’s Rock →
             </button>
           </form>
         </div>
 
-        {/* Add Me Form */}
         <div className="bg-gray-100 p-10 shadow-sm rounded-lg">
           <h2 className="text-3xl font-extrabold mb-6">Befriend</h2>
           <form
@@ -100,7 +97,7 @@ const Contact = () => {
             />
             <button
               type="submit"
-              className="text-sky-500 font-bold hover:text-black transition-colors"
+              className="font-bold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent hover:text-black transition-colors"
             >
               Add Me! →
             </button>
@@ -110,7 +107,7 @@ const Contact = () => {
             Willing to join us? Send your resume at{" "}
             <a
               href="mailto:ronixsoftware@gmail.com"
-              className="underline text-sky-500 hover:text-black"
+              className="underline bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent hover:text-black"
             >
               ronixsoftware@gmail.com
             </a>
@@ -123,4 +120,6 @@ const Contact = () => {
 };
 
 export default Contact;
+      
+
 

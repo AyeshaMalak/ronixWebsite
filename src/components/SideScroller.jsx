@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 const SideScroller = () => {
   const sections = ["home", "design", "develop", "market"]; 
   const [active, setActive] = useState("home");
@@ -24,11 +26,13 @@ const SideScroller = () => {
         <a
           key={id}
           href={`#${id}`}
-          className={`w-3 h-3 rounded-full border-2 border-sky-500 transition-all duration-300 ${
-            active === id ? "bg-sky-500 scale-125" : "bg-white hover:bg-sky-300"
+          className={`w-3 h-3 rounded-full border-2 border-cyan-500 transition-all duration-300 ${
+            active === id ? "bg-cyan-500 scale-125" : "bg-white hover:bg-cyan-400"
           }`}
         />
       ))}
     </div>
   );
 };
+
+export default SideScroller;

@@ -17,7 +17,7 @@ const Develop = () => {
       <div className="space-y-12 px-6 md:px-24 pb-20">
         <div className="bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8 mt-10">
           <div className="md:w-1/2">
-            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-snug bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-snug text-[#00D4FF]">
               Design and Develop
             </h2>
             <p className="text-black leading-relaxed text-lg">
@@ -62,7 +62,7 @@ We've got an experienced and committed iPhone and iPad software development team
 
 const Section = ({ title, text }) => (
   <div className="bg-gray-100 p-8 rounded-lg shadow-md">
-    <h2 className="text-3xl md:text-4xl font-extrabold mb-6">{title}</h2>
+    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-[#00D4FF]">{title}</h2>
     <p className="text-black leading-relaxed text-lg whitespace-pre-line">{text}</p>
   </div>
 );

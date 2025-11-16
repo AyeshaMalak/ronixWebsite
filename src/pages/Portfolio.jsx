@@ -15,37 +15,26 @@ const Portfolio = () => {
   const portfolioItems = [
     { id: 1, title: "Brand Identity", shortDesc: "Logo & branding", image: "/image3.png",
       fullDesc: "We create powerful and memorable brand identities that represent your brand vision and uniqueness." },
-
     { id: 2, title: "Website Design", shortDesc: "Responsive & modern", image: "/image2.png",
       fullDesc: "Clean, modern, and responsive website design that delivers fast performance and smooth UX." },
-
     { id: 3, title: "App Development", shortDesc: "iOS & Android apps", image: "/image1.png",
       fullDesc: "We build fast, secure, and scalable mobile apps for both Android and iOS platforms." },
-
     { id: 4, title: "Marketing Campaign", shortDesc: "Digital marketing", image: "/logo.jpeg",
       fullDesc: "Creative and impactful marketing campaigns designed to boost your business visibility." },
-
     { id: 5, title: "Infographics", shortDesc: "Social media graphics", image: "/BrandMockup.png",
       fullDesc: "Visually appealing infographics built to communicate your message beautifully and clearly." },
-
     { id: 6, title: "Stationery Design", shortDesc: "Custom stationery", image: "/portfolio1.jpg",
       fullDesc: "Premium stationery including business cards, letterheads, and brand collateral." },
-
     { id: 7, title: "Social Media Management", shortDesc: "Boosting presence", image: "/image3.png",
       fullDesc: "We create engaging content and manage social media profiles to grow your online presence." },
-
     { id: 8, title: "E-commerce App", shortDesc: "Shopping app", image: "/portfolio1.jpg",
       fullDesc: "Modern, user-friendly shopping apps that make online buying smooth and efficient." },
-
     { id: 9, title: "SEO Campaign", shortDesc: "Better ranking", image: "/portfolio3.jpg",
       fullDesc: "SEO strategies that improve your Google ranking and drive organic traffic." },
-
     { id: 10, title: "Photography", shortDesc: "Product & event", image: "/image1.png",
       fullDesc: "Professional product and event photography to enhance your brand visuals." },
-
     { id: 11, title: "Video Production", shortDesc: "Creative videos", image: "/image2.png",
       fullDesc: "High-quality video production including ads, product videos, and brand stories." },
-
     { id: 12, title: "Packaging Design", shortDesc: "Eye-catching packs", image: "/logo.jpeg",
       fullDesc: "Attractive and effective packaging designs that make products stand out on shelves." },
   ];
@@ -69,7 +58,7 @@ const Portfolio = () => {
 
       <div className="px-6 md:px-24 py-10">
 
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-center bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent m-10">
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-center bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent m-10">
           Our Work
         </h1>
 
@@ -88,19 +77,19 @@ const Portfolio = () => {
 
               {isMobile ? (
                 <div className="px-4 py-3 text-center">
-                  <h2 className="text-lg font-extrabold mb-1 bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent">
+                  <h2 className="text-lg font-extrabold mb-1 bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
                     {item.title}
                   </h2>
-                  <p className="text-sm font-semibold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent">
+                  <p className="text-sm font-semibold bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
                     {item.shortDesc}
                   </p>
                 </div>
               ) : (
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center opacity-0 hover:opacity-100 transition-opacity duration-300 px-4">
-                  <h2 className="text-2xl md:text-5xl font-extrabold mb-2 bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent">
+                  <h2 className="text-2xl md:text-5xl font-extrabold mb-2 bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
                     {item.title}
                   </h2>
-                  <p className="text-base font-semibold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent">
+                  <p className="text-base font-semibold bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
                     {item.shortDesc}
                   </p>
                 </div>
@@ -127,7 +116,7 @@ const Portfolio = () => {
               </div>
 
               <div className="p-8 flex flex-col justify-center">
-                <h2 className="text-3xl font-bold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
                   {modalItem.title}
                 </h2>
 
@@ -136,7 +125,7 @@ const Portfolio = () => {
 
                 <button
                   onClick={() => setModalItem(null)}
-                  className="mt-6 bg-[#00D4FF] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#0084FF] transition"
+                  className="mt-6 bg-cyan-400 text-white px-6 py-2 rounded-lg font-semibold hover:bg-cyan-600 transition"
                 >
                   Close
                 </button>

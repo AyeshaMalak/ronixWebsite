@@ -6,10 +6,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white p-5">
-      <div className="container-custom flex flex-wrap justify-between gap-6">
+      <div className="container-custom flex justify-between flex-wrap gap-6">
 
-        {/* Column 1 */}
-        <div className="flex-1 min-w-[120px]">
+        <div className="flex-1 min-w-[100px]">
           <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text mb-1">
             RONIX
           </h3>
@@ -18,31 +17,27 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Column 2 */}
-        <div className="flex-1 min-w-[120px] flex flex-col sm:flex-row sm:justify-between gap-6">
-          <div>
-            <h4 className="font-bold text-white mb-1">Services</h4>
-            <ul className="space-y-1 text-gray-400 text-[10px] md:text-sm">
-              <li><Link to="/design" className="hover:text-cyan-400 transition">Design</Link></li>
-              <li><Link to="/develop" className="hover:text-cyan-400 transition">Develop</Link></li>
-              <li><Link to="/market" className="hover:text-cyan-400 transition">Market</Link></li>
-              <li><Link to="/contact" className="hover:text-cyan-400 transition">Contact</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-white mb-1">Company</h4>
-            <ul className="space-y-1 text-gray-400 text-[10px] md:text-sm">
-              <li>Privacy</li>
-              <li>Terms</li>
-              <li>FAQ</li>
-              <li>Support</li>
-            </ul>
-          </div>
+        <div className="flex-1 min-w-[100px]">
+          <h4 className="font-bold text-white mb-1">Services</h4>
+          <ul className="space-y-1 text-gray-400 text-[10px] md:text-sm">
+            <li><Link to="/design" className="hover:text-cyan-400 transition">Design</Link></li>
+            <li><Link to="/develop" className="hover:text-cyan-400 transition">Develop</Link></li>
+            <li><Link to="/market" className="hover:text-cyan-400 transition">Market</Link></li>
+            <li><Link to="/contact" className="hover:text-cyan-400 transition">Contact</Link></li>
+          </ul>
         </div>
 
-        {/* Column 3 */}
-        <div className="flex-1 min-w-[120px]">
+        <div className="flex-1 min-w-[100px]">
+          <h4 className="font-bold text-white mb-1">Company</h4>
+          <ul className="space-y-1 text-gray-400 text-[10px] md:text-sm">
+            <li>Privacy</li>
+            <li>Terms</li>
+            <li>FAQ</li>
+            <li>Support</li>
+          </ul>
+        </div>
+
+        <div className="flex-1 min-w-[100px] mt-4 md:mt-0">
           <h4 className="font-bold text-white mb-1">Connect</h4>
           <div className="flex gap-2">
             <a href="https://www.linkedin.com/in/ronix-software" target="_blank" rel="noopener noreferrer" className="p-1 rounded bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-cyan-400 transition">

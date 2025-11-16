@@ -6,12 +6,9 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#E3F7FD] to-[#FFFFFF] px-4">
-      
       <div className="bg-white shadow-lg rounded-2xl w-full max-w-md p-10">
-        
-        {/* Top Icon */}
         <div className="flex justify-center mb-6">
-          <MdPersonAdd className="text-6xl text-[#28a0f0]" />
+          <MdPersonAdd className="text-6xl bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent" />
         </div>
 
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
@@ -19,8 +16,7 @@ const Signup = () => {
         </h2>
 
         <form className="space-y-6">
-          {/* Username Field */}
-          <div className="flex items-center border-b-2 border-gray-200 focus-within:border-[#28a0f0] transition-colors py-3 px-3 rounded-md bg-gray-50">
+          <div className="flex items-center border-b-2 border-gray-200 focus-within:border-[#00D4FF] transition-colors py-3 px-3 rounded-md bg-gray-50">
             <FaUserAlt className="text-gray-400 mr-3 text-lg" />
             <input
               type="text"
@@ -29,8 +25,7 @@ const Signup = () => {
             />
           </div>
 
-          {/* Email Field */}
-          <div className="flex items-center border-b-2 border-gray-200 focus-within:border-[#28a0f0] transition-colors py-3 px-3 rounded-md bg-gray-50">
+          <div className="flex items-center border-b-2 border-gray-200 focus-within:border-[#00D4FF] transition-colors py-3 px-3 rounded-md bg-gray-50">
             <FaEnvelope className="text-gray-400 mr-3 text-lg" />
             <input
               type="email"
@@ -39,8 +34,7 @@ const Signup = () => {
             />
           </div>
 
-          {/* Password Field */}
-          <div className="flex items-center border-b-2 border-gray-200 focus-within:border-[#28a0f0] transition-colors py-3 px-3 rounded-md bg-gray-50">
+          <div className="flex items-center border-b-2 border-gray-200 focus-within:border-[#00D4FF] transition-colors py-3 px-3 rounded-md bg-gray-50">
             <FaLock className="text-gray-400 mr-3 text-lg" />
             <input
               type="password"
@@ -49,10 +43,9 @@ const Signup = () => {
             />
           </div>
 
-          {/* Sign Up Button */}
           <button
             type="submit"
-            className="w-full py-3 rounded-full text-white font-semibold bg-gradient-to-b from-[#A4E6F8] to-[#28a0f0] hover:from-[#28a0f0] hover:to-[#A4E6F8] transition-all flex justify-center items-center gap-2 text-lg shadow-md"
+            className="w-full py-3 rounded-full text-white font-semibold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] hover:from-[#0084FF] hover:to-[#00D4FF] transition-all flex justify-center items-center gap-2 text-lg shadow-md"
           >
             <MdPersonAdd /> Sign Up
           </button>
@@ -62,7 +55,7 @@ const Signup = () => {
           Already have an account?{" "}
           <Link
             to="/"
-            className="text-blue-500 font-semibold hover:underline"
+            className="font-semibold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent hover:text-black"
           >
             Login
           </Link>
@@ -73,4 +66,3 @@ const Signup = () => {
 };
 
 export default Signup;
-

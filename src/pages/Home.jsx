@@ -5,10 +5,12 @@ import { ArrowDown } from "lucide-react";
 const Section = ({ id, title, text, img, reverse }) => (
   <section
     id={id}
-    className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
+    className={`flex flex-col ${
+      reverse ? "md:flex-row-reverse" : "md:flex-row"
+    } items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
   >
     <div className="md:w-1/2 text-center md:text-left">
-      <h2 className="text-4xl font-bold mb-4 bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent">
+      <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-b from-[#7EF0FF] to-[#008CFF] bg-clip-text text-transparent tracking-wide">
         {title}
       </h2>
       <p className="text-lg leading-relaxed text-gray-700">{text}</p>
@@ -33,7 +35,10 @@ const SideScroller = () => {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          if (
+            rect.top <= window.innerHeight / 2 &&
+            rect.bottom >= window.innerHeight / 2
+          ) {
             setActive(id);
           }
         }
@@ -49,7 +54,9 @@ const SideScroller = () => {
         <a
           key={id}
           href={`#${id}`}
-          className={`w-3 h-3 rounded-full border-2 border-sky-500 transition-all duration-300 ${active === id ? "bg-sky-500 scale-125" : "bg-white hover:bg-sky-300"}`}
+          className={`w-3 h-3 rounded-full border-2 border-[#00B8FF] transition-all duration-300 ${
+            active === id ? "bg-[#00B8FF] scale-125" : "bg-white hover:bg-[#7EE7FF]"
+          }`}
           aria-label={`Navigate to ${id}`}
         />
       ))}
@@ -70,14 +77,17 @@ const Home = () => {
         </div>
       </div>
 
-      <section id="home" className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50">
+      <section
+        id="home"
+        className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50"
+      >
         <div className="flex flex-wrap justify-center gap-6 sm:gap-12 md:gap-16 mb-12 font-extrabold text-base sm:text-lg md:text-xl uppercase tracking-wider text-black">
-          <Link to="/design" className="hover:text-[#5AB5F3] transition-colors">DESIGN</Link>
-          <Link to="/develop" className="hover:text-[#5AB5F3] transition-colors">DEVELOP</Link>
-          <Link to="/market" className="hover:text-[#5AB5F3] transition-colors">MARKET</Link>
+          <Link to="/design" className="hover:text-[#00AFFF] transition-colors">DESIGN</Link>
+          <Link to="/develop" className="hover:text-[#00AFFF] transition-colors">DEVELOP</Link>
+          <Link to="/market" className="hover:text-[#00AFFF] transition-colors">MARKET</Link>
         </div>
 
-        <h1 className="font-extrabold text-[20vw] sm:text-[15vw] md:text-[12vw] lg:text-[10vw] xl:text-[200px] leading-none mb-8 text-center bg-gradient-to-b from-[#A4E6F8] to-[#28a0f0] bg-clip-text text-transparent">
+        <h1 className="font-black text-[20vw] sm:text-[15vw] md:text-[12vw] lg:text-[10vw] xl:text-[200px] leading-none mb-8 text-center bg-gradient-to-b from-[#7EF0FF] to-[#008CFF] bg-clip-text text-transparent tracking-wide">
           RONIX
         </h1>
 
@@ -92,24 +102,23 @@ const Home = () => {
           onClick={() => navigate("/portfolio")}
         >
           <span className="font-bold">FEATURED WORK</span>
-          <ArrowDown className="mt-3 h-5 w-5 animate-bounce text-[#5AB5F3]" />
+          <ArrowDown className="mt-3 h-5 w-5 animate-bounce text-[#00AFFF]" />
         </div>
 
         <div className="fixed left-2 md:left-10 top-1/2 -translate-y-1/2 flex-col gap-12 md:gap-10 px-2 py-4 rounded-md z-50 hidden sm:flex text-black">
           <Link
             to="/portfolio"
-            className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#5AB5F3] transition-colors"
+            className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#00AFFF] transition-colors"
           >
             PORTFOLIO
           </Link>
           <Link
             to="/contact"
-            className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#5AB5F3] transition-colors"
+            className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#00AFFF] transition-colors"
           >
             CONTACT
           </Link>
         </div>
-
       </section>
 
       <Section
@@ -135,12 +144,11 @@ const Home = () => {
       />
 
       <div className="sm:hidden fixed bottom-0 left-0 right-0 bg-white flex justify-around py-4 z-50 text-black">
-        <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#5AB5F3] transition-colors">PORTFOLIO</Link>
-        <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#5AB5F3] transition-colors">CONTACT</Link>
+        <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#00AFFF] transition-colors">PORTFOLIO</Link>
+        <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#00AFFF] transition-colors">CONTACT</Link>
       </div>
     </div>
   );
 };
 
 export default Home;
-

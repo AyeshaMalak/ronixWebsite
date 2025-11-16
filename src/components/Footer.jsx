@@ -5,21 +5,20 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white p-12">
-      <div className="container-custom">
-        <div className="grid md:grid-cols-4 gap-10 mb-10">
+    <footer className="bg-gray-900 text-white py-6">
+      <div className="container-custom flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-12">
+        <div className="flex-1">
+          <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text mb-1">
+            RONIX
+          </h3>
+          <p className="text-gray-400 text-xs md:text-sm">
+            Creating exceptional digital experiences for forward-thinking brands.
+          </p>
+        </div>
 
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 text-xs md:text-sm">
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text mb-3">
-              RONIX
-            </h3>
-            <p className="text-gray-400 leading-relaxed">
-              Creating exceptional digital experiences for forward-thinking brands.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-white mb-3">Services</h4>
+            <h4 className="font-bold text-white mb-1">Services</h4>
             <ul className="space-y-1 text-gray-400">
               <li><Link to="/design" className="hover:text-cyan-400 transition">Design</Link></li>
               <li><Link to="/develop" className="hover:text-cyan-400 transition">Develop</Link></li>
@@ -29,7 +28,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-white mb-3">Company</h4>
+            <h4 className="font-bold text-white mb-1">Company</h4>
             <ul className="space-y-1 text-gray-400">
               <li>Privacy Policy</li>
               <li>Terms of Service</li>
@@ -39,32 +38,27 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-white mb-3">Connect</h4>
-            <div className="flex gap-3">
+            <h4 className="font-bold text-white mb-1">Connect</h4>
+            <div className="flex gap-2">
               <a
-                href="https://www.linkedin.com/in/ronix-software?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                href="https://www.linkedin.com/in/ronix-software"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-cyan-400 transition"
-              >
-                <Linkedin size={18} />
-              </a>
+                className="p-1 rounded bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-cyan-400 transition"
+              ><Linkedin size={16} /></a>
               <a
                 href="https://www.instagram.com/ronixsoftware/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-cyan-400 transition"
-              >
-                <Instagram size={18} />
-              </a>
+                className="p-1 rounded bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-cyan-400 transition"
+              ><Instagram size={16} /></a>
             </div>
           </div>
-
         </div>
+      </div>
 
-        <div className="border-t border-gray-800 pt-5 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-          <p>&copy; {currentYear} Ronix. All rights reserved.</p>
-        </div>
+      <div className="border-t border-gray-800 mt-4 pt-3 text-gray-500 text-xs text-center md:text-left">
+        &copy; {currentYear} Ronix. All rights reserved.
       </div>
     </footer>
   )

@@ -1,4 +1,3 @@
-// pages/Login.jsx
 import React, { useState } from "react";
 import { FaUserAlt, FaLock } from "react-icons/fa";
 import { MdLogin } from "react-icons/md";
@@ -77,3 +76,4 @@ const Login = () => {
 };
 
 export default Login;
+

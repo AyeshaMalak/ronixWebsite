@@ -7,8 +7,6 @@ import Develop from "./pages/Develop";
 import Market from "./pages/Market";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
 
 function App() {
   return (
@@ -22,8 +20,6 @@ function App() {
           <Route path="/market" element={<Market />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
 

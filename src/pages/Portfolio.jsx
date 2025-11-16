@@ -1,4 +1,3 @@
-// pages/Portfolio.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -156,3 +155,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+

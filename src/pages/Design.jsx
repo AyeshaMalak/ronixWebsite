@@ -1,32 +1,39 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Design = () => {
   return (
     <div className="bg-white min-h-screen font-sans relative">
-         <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
+      
+      <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <Link to="/home">
-            <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-30 object-contain cursor-pointer" />
+            <img
+              src="/logo.jpeg"
+              alt="RONIX Logo"
+              className="h-16 sm:h-30 object-contain cursor-pointer"
+            />
           </Link>
         </div>
       </div>
 
-      
-      <div className="h-24 "></div> 
+      <div className="h-24"></div>
 
-      
+      {/* Sections */}
       <div className="space-y-12 px-6 md:px-24 pb-20">
         <div className="bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8 mt-18">
           <div className="md:w-1/2">
-            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-snug bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-snug text-[#00D4FF]">
               Brand Identity
             </h2>
+
             <p className="text-gray-800 leading-relaxed text-lg">
-              We create strong brand identities that elevate your business globally.  
+              We create strong brand identities that elevate your business globally.
               Clear and memorable designs for maximum impact.
             </p>
           </div>
+
           <div className="md:w-1/2 flex justify-center">
             <img
               src="/image3.png"
@@ -73,10 +80,9 @@ const Design = () => {
   );
 };
 
-// Reusable Section Component
 const Section = ({ title, text }) => (
   <div className="bg-gray-100 p-8 rounded-lg shadow-md">
-    <h2 className="text-3xl md:text-4xl font-extrabold mb-6">{title}</h2>
+    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-[#00D4FF]">{title}</h2>
     <p className="text-gray-800 leading-relaxed text-lg">{text}</p>
   </div>
 );

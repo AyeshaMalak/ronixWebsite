@@ -5,9 +5,6 @@ const Portfolio = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [modalItem, setModalItem] = useState(null);
 
-  
-  const gradientClass = "bg-gradient-to-b from-[#19D3FF] to-[#0084FF] bg-clip-text text-transparent";
-
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     handleResize();
@@ -45,7 +42,7 @@ const Portfolio = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
 
-      {/* Navbar */}
+      
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <Link to="/home">
@@ -63,7 +60,7 @@ const Portfolio = () => {
       <div className="px-6 md:px-24 py-10">
 
         {/* Section Heading */}
-        <h1 className={`text-3xl md:text-5xl font-extrabold mb-10 text-center ${gradientClass} m-10`}>
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-center text-[#19D3FF] m-10">
           Our Work
         </h1>
 
@@ -83,19 +80,19 @@ const Portfolio = () => {
 
               {isMobile ? (
                 <div className="px-4 py-3 text-center">
-                  <h2 className={`text-lg font-extrabold mb-1 ${gradientClass}`}>
+                  <h2 className="text-lg font-extrabold mb-1 text-[#19D3FF]">
                     {item.title}
                   </h2>
-                  <p className={`text-sm font-semibold ${gradientClass}`}>
+                  <p className="text-sm font-semibold text-[#19D3FF]">
                     {item.shortDesc}
                   </p>
                 </div>
               ) : (
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center opacity-0 hover:opacity-100 transition-opacity duration-300 px-4">
-                  <h2 className={`text-2xl md:text-5xl font-extrabold mb-2 ${gradientClass}`}>
+                  <h2 className="text-2xl md:text-5xl font-extrabold mb-2 text-[#19D3FF]">
                     {item.title}
                   </h2>
-                  <p className={`text-base font-semibold ${gradientClass}`}>
+                  <p className="text-base font-semibold text-[#19D3FF]">
                     {item.shortDesc}
                   </p>
                 </div>
@@ -123,7 +120,7 @@ const Portfolio = () => {
               </div>
 
               <div className="p-8 flex flex-col justify-center">
-                <h2 className={`text-3xl font-bold ${gradientClass}`}>
+                <h2 className="text-3xl font-bold text-[#19D3FF]">
                   {modalItem.title}
                 </h2>
 

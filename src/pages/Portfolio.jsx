@@ -58,7 +58,7 @@ const Portfolio = () => {
 
       <div className="px-6 md:px-24 py-10">
 
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-center bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent m-10">
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-center text-cyan-500 m-10">
           Our Work
         </h1>
 
@@ -77,19 +77,19 @@ const Portfolio = () => {
 
               {isMobile ? (
                 <div className="px-4 py-3 text-center">
-                  <h2 className="text-lg font-extrabold mb-1 bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
+                  <h2 className="text-lg font-extrabold mb-1 text-cyan-500">
                     {item.title}
                   </h2>
-                  <p className="text-sm font-semibold bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
+                  <p className="text-sm font-semibold text-cyan-500">
                     {item.shortDesc}
                   </p>
                 </div>
               ) : (
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center opacity-0 hover:opacity-100 transition-opacity duration-300 px-4">
-                  <h2 className="text-2xl md:text-5xl font-extrabold mb-2 bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
+                  <h2 className="text-2xl md:text-5xl font-extrabold mb-2 text-cyan-500">
                     {item.title}
                   </h2>
-                  <p className="text-base font-semibold bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
+                  <p className="text-base font-semibold text-cyan-500">
                     {item.shortDesc}
                   </p>
                 </div>
@@ -116,7 +116,7 @@ const Portfolio = () => {
               </div>
 
               <div className="p-8 flex flex-col justify-center">
-                <h2 className="text-3xl font-bold bg-gradient-to-b from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold text-cyan-500">
                   {modalItem.title}
                 </h2>
 
@@ -125,7 +125,7 @@ const Portfolio = () => {
 
                 <button
                   onClick={() => setModalItem(null)}
-                  className="mt-6 bg-cyan-400 text-white px-6 py-2 rounded-lg font-semibold hover:bg-cyan-600 transition"
+                  className="mt-6 bg-cyan-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-cyan-600 transition"
                 >
                   Close
                 </button>

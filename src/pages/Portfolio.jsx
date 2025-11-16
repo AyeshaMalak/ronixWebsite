@@ -53,7 +53,6 @@ const Portfolio = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
 
-      {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <Link to="/home">
@@ -70,11 +69,10 @@ const Portfolio = () => {
 
       <div className="px-6 md:px-24 py-10">
 
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-center bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent m-10">
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-center bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent m-10">
           Our Work
         </h1>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {portfolioItems.map((item) => (
             <div
@@ -90,19 +88,19 @@ const Portfolio = () => {
 
               {isMobile ? (
                 <div className="px-4 py-3 text-center">
-                  <h2 className="text-lg font-extrabold mb-1 bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent">
+                  <h2 className="text-lg font-extrabold mb-1 bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent">
                     {item.title}
                   </h2>
-                  <p className="text-sm font-semibold bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent">
+                  <p className="text-sm font-semibold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent">
                     {item.shortDesc}
                   </p>
                 </div>
               ) : (
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center opacity-0 hover:opacity-100 transition-opacity duration-300 px-4">
-                  <h2 className="text-2xl md:text-5xl font-extrabold mb-2 bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent">
+                  <h2 className="text-2xl md:text-5xl font-extrabold mb-2 bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent">
                     {item.title}
                   </h2>
-                  <p className="text-base font-semibold bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent">
+                  <p className="text-base font-semibold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent">
                     {item.shortDesc}
                   </p>
                 </div>
@@ -111,7 +109,6 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* MODAL */}
         {modalItem && (
           <div
             className="fixed inset-0 z-50 flex justify-center items-center p-4 bg-black/40 backdrop-blur-sm"
@@ -130,17 +127,16 @@ const Portfolio = () => {
               </div>
 
               <div className="p-8 flex flex-col justify-center">
-                <h2 className="text-3xl font-bold bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent">
                   {modalItem.title}
                 </h2>
 
                 <p className="mt-2 text-gray-700 font-semibold">{modalItem.shortDesc}</p>
-
                 <p className="mt-4 text-gray-600 leading-relaxed">{modalItem.fullDesc}</p>
 
                 <button
                   onClick={() => setModalItem(null)}
-                  className="mt-6 bg-[#5AB5F3] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#3a9ed9] transition"
+                  className="mt-6 bg-[#00D4FF] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#0084FF] transition"
                 >
                   Close
                 </button>
@@ -155,4 +151,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-

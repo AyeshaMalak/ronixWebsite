@@ -15,6 +15,7 @@ const Develop = () => {
       <div className="h-32"></div>
 
       <div className="space-y-12 px-6 md:px-24 pb-20">
+        {/* First Section with Cyan Heading */}
         <div className="bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8 mt-10">
           <div className="md:w-1/2">
             <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-snug text-[#00D4FF]">
@@ -33,9 +34,10 @@ const Develop = () => {
           </div>
         </div>
 
+        {/* Other Sections with Black Headings */}
         <Section
           title="Web Design and Development"
-          text="Your website is an extension of your brand. In fact, it’s generally the manner people are added to your business. What does your website say about you? At RONIX, we help your brand come to existence at the web via customized websites developed along with your corporation and target audience in thoughts."
+          text="Your website is an extension of your brand. At RONIX, we help your brand come to existence at the web via customized websites developed along with your corporation and target audience in thoughts."
         />
 
         <Section
@@ -51,9 +53,7 @@ const Develop = () => {
 
         <Section
           title="App Design and Development"
-          text={`RONIX are expert iPhone/iPad apps designers and developers. We develop apps for iOS (iPad and iPhone). RONIX developers maintain high educational levels and design qualifications and take pride in providing top-class, affordable products and services.
-
-We've got an experienced and committed iPhone and iPad software development team that is always keen to listen to your ideas and help bring them to life. We provide app design and development services for agencies globally using cutting-edge technologies to ensure your apps are tailor-made to satisfy your requirements. Whether it is hybrid or native apps, you can count on us for that!`}
+          text={`RONIX are expert iPhone/iPad apps designers and developers. We develop apps for iOS (iPad and iPhone). RONIX developers maintain high educational levels and design qualifications and take pride in providing top-class, affordable products and services.`}
         />
       </div>
     </div>
@@ -62,7 +62,7 @@ We've got an experienced and committed iPhone and iPad software development team
 
 const Section = ({ title, text }) => (
   <div className="bg-gray-100 p-8 rounded-lg shadow-md">
-    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-[#00D4FF]">{title}</h2>
+    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-black">{title}</h2>
     <p className="text-black leading-relaxed text-lg whitespace-pre-line">{text}</p>
   </div>
 );

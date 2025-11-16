@@ -98,7 +98,7 @@ const Home = () => {
           onClick={() => navigate("/portfolio")}
         >
           <span className="font-bold">FEATURED WORK</span>
-          <ArrowDown className="mt-3 h-5 w-5 animate-bounce text-[#0084FF]" />
+          <ArrowDown className="mt-3 h-5 w-5 animate-bounce text-[#00D4FF]" />
         </div>
 
         <div className="fixed left-2 md:left-10 top-1/2 -translate-y-1/2 flex-col gap-12 md:gap-10 px-2 py-4 rounded-md z-50 hidden sm:flex text-black">
@@ -148,3 +148,4 @@ const Home = () => {
 };
 
 export default Home;
+

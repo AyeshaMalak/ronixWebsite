@@ -1,4 +1,3 @@
-// pages/Signup.jsx
 import React from "react";
 import { FaUserAlt, FaLock, FaEnvelope } from "react-icons/fa";
 import { MdPersonAdd } from "react-icons/md";
@@ -74,3 +73,4 @@ const Signup = () => {
 };
 
 export default Signup;
+

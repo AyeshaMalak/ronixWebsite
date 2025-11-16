@@ -5,9 +5,7 @@ import { ArrowDown } from "lucide-react";
 const Section = ({ id, title, text, img, reverse }) => (
   <section
     id={id}
-    className={`flex flex-col ${
-      reverse ? "md:flex-row-reverse" : "md:flex-row"
-    } items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
+    className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
   >
     <div className="md:w-1/2 text-center md:text-left">
       <h2 className="text-4xl font-bold mb-4 bg-gradient-to-b from-[#A4E6F8] to-[#5AB5F3] bg-clip-text text-transparent">
@@ -35,10 +33,7 @@ const SideScroller = () => {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          if (
-            rect.top <= window.innerHeight / 2 &&
-            rect.bottom >= window.innerHeight / 2
-          ) {
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
             setActive(id);
           }
         }
@@ -54,9 +49,7 @@ const SideScroller = () => {
         <a
           key={id}
           href={`#${id}`}
-          className={`w-3 h-3 rounded-full border-2 border-sky-500 transition-all duration-300 ${
-            active === id ? "bg-sky-500 scale-125" : "bg-white hover:bg-sky-300"
-          }`}
+          className={`w-3 h-3 rounded-full border-2 border-sky-500 transition-all duration-300 ${active === id ? "bg-sky-500 scale-125" : "bg-white hover:bg-sky-300"}`}
           aria-label={`Navigate to ${id}`}
         />
       ))}
@@ -71,54 +64,13 @@ const Home = () => {
     <div className="relative">
       <SideScroller />
 
-      {/* ⭐ PERFECT RESPONSIVE HEADER ⭐ */}
-      <div className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center relative">
-
-          {/* LEFT SIDE (Desktop balance spacer) */}
-          <div className="hidden md:block w-1/3"></div>
-
-          {/* CENTER LOGO */}
-          <div className="w-full md:w-1/3 flex justify-center">
-            <Link to="/home">
-              <img
-                src="/logo.jpeg"
-                alt="RONIX Logo"
-                className="h-12 sm:h-16 md:h-20 object-contain cursor-pointer"
-              />
-            </Link>
-          </div>
-
-          {/* RIGHT SIDE BUTTONS */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 md:static md:translate-y-0 
-                          md:w-1/3 flex justify-end items-center gap-3">
-
-            <Link
-              to="/login"
-              className="px-3 py-1 sm:px-4 sm:py-2 border-2 border-[#5AB5F3] 
-                         text-[#5AB5F3] font-semibold rounded-lg text-xs sm:text-sm 
-                         hover:bg-[#5AB5F3] hover:text-white transition-all"
-            >
-              Login
-            </Link>
-
-            <Link
-              to="/signup"
-              className="px-3 py-1 sm:px-4 sm:py-2 bg-[#5AB5F3] text-white font-semibold 
-                         rounded-lg text-xs sm:text-sm hover:bg-[#28a0f0] transition-all"
-            >
-              Signup
-            </Link>
-          </div>
-
+      <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
+        <div className="max-w-7xl mx-auto flex justify-center items-center">
+          <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-30 object-contain" />
         </div>
       </div>
-      {/* END HEADER */}
 
-      <section
-        id="home"
-        className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50"
-      >
+      <section id="home" className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50">
         <div className="flex flex-wrap justify-center gap-6 sm:gap-12 md:gap-16 mb-12 font-extrabold text-base sm:text-lg md:text-xl uppercase tracking-wider text-black">
           <Link to="/design" className="hover:text-[#5AB5F3] transition-colors">DESIGN</Link>
           <Link to="/develop" className="hover:text-[#5AB5F3] transition-colors">DEVELOP</Link>
@@ -143,7 +95,7 @@ const Home = () => {
           <ArrowDown className="mt-3 h-5 w-5 animate-bounce text-[#5AB5F3]" />
         </div>
 
-        <div className="fixed left-2 md:left-50 top-1/2 -translate-y-1/2 flex-col gap-12 md:gap-10 px-2 py-4 rounded-md z-50 hidden sm:flex text-black">
+        <div className="fixed left-2 md:left-20 top-1/2 -translate-y-1/2 flex-col gap-12 md:gap-10 px-2 py-4 rounded-md z-50 hidden sm:flex text-black">
           <Link
             to="/portfolio"
             className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#5AB5F3] transition-colors"
@@ -157,6 +109,7 @@ const Home = () => {
             CONTACT
           </Link>
         </div>
+
       </section>
 
       <Section
@@ -182,12 +135,8 @@ const Home = () => {
       />
 
       <div className="sm:hidden fixed bottom-0 left-0 right-0 bg-white flex justify-around py-4 z-50 text-black">
-        <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#5AB5F3] transition-colors">
-          PORTFOLIO
-        </Link>
-        <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#5AB5F3] transition-colors">
-          CONTACT
-        </Link>
+        <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#5AB5F3] transition-colors">PORTFOLIO</Link>
+        <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#5AB5F3] transition-colors">CONTACT</Link>
       </div>
     </div>
   );

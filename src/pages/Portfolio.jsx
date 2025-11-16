@@ -5,6 +5,9 @@ const Portfolio = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [modalItem, setModalItem] = useState(null);
 
+  
+  const gradientClass = "bg-gradient-to-b from-[#19D3FF] to-[#0084FF] bg-clip-text text-transparent";
+
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     handleResize();
@@ -42,6 +45,7 @@ const Portfolio = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
 
+      {/* Navbar */}
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <Link to="/home">
@@ -58,10 +62,12 @@ const Portfolio = () => {
 
       <div className="px-6 md:px-24 py-10">
 
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-center text-cyan-500 m-10">
+        {/* Section Heading */}
+        <h1 className={`text-3xl md:text-5xl font-extrabold mb-10 text-center ${gradientClass} m-10`}>
           Our Work
         </h1>
 
+        {/* Portfolio Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {portfolioItems.map((item) => (
             <div
@@ -77,19 +83,19 @@ const Portfolio = () => {
 
               {isMobile ? (
                 <div className="px-4 py-3 text-center">
-                  <h2 className="text-lg font-extrabold mb-1 text-cyan-500">
+                  <h2 className={`text-lg font-extrabold mb-1 ${gradientClass}`}>
                     {item.title}
                   </h2>
-                  <p className="text-sm font-semibold text-cyan-500">
+                  <p className={`text-sm font-semibold ${gradientClass}`}>
                     {item.shortDesc}
                   </p>
                 </div>
               ) : (
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center opacity-0 hover:opacity-100 transition-opacity duration-300 px-4">
-                  <h2 className="text-2xl md:text-5xl font-extrabold mb-2 text-cyan-500">
+                  <h2 className={`text-2xl md:text-5xl font-extrabold mb-2 ${gradientClass}`}>
                     {item.title}
                   </h2>
-                  <p className="text-base font-semibold text-cyan-500">
+                  <p className={`text-base font-semibold ${gradientClass}`}>
                     {item.shortDesc}
                   </p>
                 </div>
@@ -98,6 +104,7 @@ const Portfolio = () => {
           ))}
         </div>
 
+        {/* Modal */}
         {modalItem && (
           <div
             className="fixed inset-0 z-50 flex justify-center items-center p-4 bg-black/40 backdrop-blur-sm"
@@ -116,7 +123,7 @@ const Portfolio = () => {
               </div>
 
               <div className="p-8 flex flex-col justify-center">
-                <h2 className="text-3xl font-bold text-cyan-500">
+                <h2 className={`text-3xl font-bold ${gradientClass}`}>
                   {modalItem.title}
                 </h2>
 
@@ -125,7 +132,7 @@ const Portfolio = () => {
 
                 <button
                   onClick={() => setModalItem(null)}
-                  className="mt-6 bg-cyan-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-cyan-600 transition"
+                  className="mt-6 bg-[#19D3FF] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#0084FF] transition"
                 >
                   Close
                 </button>

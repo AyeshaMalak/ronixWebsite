@@ -6,9 +6,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white p-5">
-      <div className="container-custom flex justify-between flex-wrap gap-6">
+      <div className="container-custom flex flex-wrap justify-between gap-6">
 
-        <div className="flex-1 min-w-[100px]">
+        <div className="flex-1 min-w-[150px]">
           <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text mb-1">
             RONIX
           </h3>
@@ -17,7 +17,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex-1 min-w-[100px]">
+        <div className="flex-1 min-w-[150px]">
           <h4 className="font-bold text-white mb-1">Services</h4>
           <ul className="space-y-1 text-gray-400 text-[10px] md:text-sm">
             <li><Link to="/design" className="hover:text-cyan-400 transition">Design</Link></li>
@@ -27,19 +27,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="flex-1 min-w-[100px]">
-          <h4 className="font-bold text-white mb-1">Company</h4>
-          <ul className="space-y-1 text-gray-400 text-[10px] md:text-sm">
-            <li>Privacy</li>
-            <li>Terms</li>
-            <li>FAQ</li>
-            <li>Support</li>
-          </ul>
-        </div>
-
-        <div className="flex-1 min-w-[100px] mt-4 md:mt-0">
+        <div className="flex-1 min-w-[150px]">
           <h4 className="font-bold text-white mb-1">Connect</h4>
-          <div className="flex gap-2">
+          <div className="flex gap-2 mb-2">
             <a href="https://www.linkedin.com/in/ronix-software" target="_blank" rel="noopener noreferrer" className="p-1 rounded bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-cyan-400 transition">
               <Linkedin size={16} />
             </a>
@@ -47,6 +37,27 @@ export default function Footer() {
               <Instagram size={16} />
             </a>
           </div>
+        </div>
+
+        <div className="flex-1 min-w-[150px]">
+          <h4 className="font-bold text-white mb-1">Contact</h4>
+          <form className="flex flex-col gap-2">
+            <input 
+              type="email" 
+              placeholder="Your email" 
+              className="p-2 text-gray-900 rounded text-sm md:text-base"
+            />
+            <textarea 
+              placeholder="Message" 
+              className="p-2 text-gray-900 rounded text-sm md:text-base resize-none h-16"
+            ></textarea>
+            <button 
+              type="submit" 
+              className="bg-cyan-500 hover:bg-cyan-600 text-white p-2 rounded text-sm md:text-base transition"
+            >
+              Send
+            </button>
+          </form>
         </div>
 
       </div>

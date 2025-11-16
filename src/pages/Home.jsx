@@ -67,9 +67,9 @@ const Home = () => {
     <div className="relative">
       <SideScroller />
 
-      <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-2 shadow-md z-50">
+      <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1.5 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
-          <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-30 object-contain" />
+          <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-24 object-contain" />
         </div>
       </div>
 
@@ -148,5 +148,6 @@ const Home = () => {
 };
 
 export default Home;
+
 
 

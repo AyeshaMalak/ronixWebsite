@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white p-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10">
+      <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10">
 
         <div>
           <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text mb-2">

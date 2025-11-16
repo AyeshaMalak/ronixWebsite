@@ -45,11 +45,11 @@ export default function Footer() {
             <input 
               type="email" 
               placeholder="Your email" 
-              className="p-2 text-gray-900 rounded text-sm md:text-base"
+              className="p-2 text-gray-900 rounded text-sm md:text-base border border-white bg-gray-900 placeholder-gray-400"
             />
             <textarea 
               placeholder="Message" 
-              className="p-2 text-gray-900 rounded text-sm md:text-base resize-none h-16"
+              className="p-2 text-gray-900 rounded text-sm md:text-base resize-none h-16 border border-white bg-gray-900 placeholder-gray-400"
             ></textarea>
             <button 
               type="submit" 

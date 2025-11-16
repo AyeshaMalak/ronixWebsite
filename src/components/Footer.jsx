@@ -6,23 +6,23 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white p-5">
-      <div className="container-custom grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div className="container-custom flex flex-wrap justify-between gap-6">
 
         {/* Column 1 */}
-        <div>
+        <div className="flex-1 min-w-[120px]">
           <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-500 text-transparent bg-clip-text mb-1">
             RONIX
           </h3>
-          <p className="text-gray-400 text-xs md:text-sm">
+          <p className="text-gray-400 text-[10px] md:text-sm">
             Creating exceptional digital experiences for forward-thinking brands.
           </p>
         </div>
 
         {/* Column 2 */}
-        <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
+        <div className="flex-1 min-w-[120px] flex flex-col sm:flex-row sm:justify-between gap-6">
           <div>
             <h4 className="font-bold text-white mb-1">Services</h4>
-            <ul className="space-y-1 text-gray-400">
+            <ul className="space-y-1 text-gray-400 text-[10px] md:text-sm">
               <li><Link to="/design" className="hover:text-cyan-400 transition">Design</Link></li>
               <li><Link to="/develop" className="hover:text-cyan-400 transition">Develop</Link></li>
               <li><Link to="/market" className="hover:text-cyan-400 transition">Market</Link></li>
@@ -32,7 +32,7 @@ export default function Footer() {
 
           <div>
             <h4 className="font-bold text-white mb-1">Company</h4>
-            <ul className="space-y-1 text-gray-400">
+            <ul className="space-y-1 text-gray-400 text-[10px] md:text-sm">
               <li>Privacy</li>
               <li>Terms</li>
               <li>FAQ</li>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
 
         {/* Column 3 */}
-        <div>
+        <div className="flex-1 min-w-[120px]">
           <h4 className="font-bold text-white mb-1">Connect</h4>
           <div className="flex gap-2">
             <a href="https://www.linkedin.com/in/ronix-software" target="_blank" rel="noopener noreferrer" className="p-1 rounded bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-cyan-400 transition">
@@ -56,7 +56,7 @@ export default function Footer() {
 
       </div>
 
-      <div className="border-t border-gray-800 mt-4 pt-3 text-gray-500 text-xs text-center md:text-left">
+      <div className="border-t border-gray-800 mt-4 pt-3 text-gray-500 text-[10px] md:text-xs text-center md:text-left">
         &copy; {currentYear} Ronix. All rights reserved.
       </div>
     </footer>

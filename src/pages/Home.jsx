@@ -5,12 +5,10 @@ import { ArrowDown } from "lucide-react";
 const Section = ({ id, title, text, img, reverse }) => (
   <section
     id={id}
-    className={`flex flex-col ${
-      reverse ? "md:flex-row-reverse" : "md:flex-row"
-    } items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
+    className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
   >
     <div className="md:w-1/2 text-center md:text-left">
-      <h2 className="text-4xl font-extrabold mb-4 bg-gradient-to-b from-[#19D3FF] to-[#0084FF] bg-clip-text text-transparent tracking-wide">
+      <h2 className="text-4xl font-extrabold mb-4 text-[#00D4FF] tracking-wide">
         {title}
       </h2>
       <p className="text-lg leading-relaxed text-gray-700">{text}</p>
@@ -36,10 +34,7 @@ const SideScroller = () => {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          if (
-            rect.top <= window.innerHeight / 2 &&
-            rect.bottom >= window.innerHeight / 2
-          ) {
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
             setActive(id);
           }
         }
@@ -88,7 +83,7 @@ const Home = () => {
           <Link to="/market" className="hover:text-[#0084FF] transition-colors">MARKET</Link>
         </div>
 
-        <h1 className="font-black text-[20vw] sm:text-[15vw] md:text-[12vw] lg:text-[10vw] xl:text-[200px] leading-none mb-8 text-center bg-gradient-to-b from-[#19D3FF] to-[#0084FF] bg-clip-text text-transparent tracking-wide">
+        <h1 className="font-black text-[20vw] sm:text-[15vw] md:text-[12vw] lg:text-[10vw] xl:text-[200px] leading-none mb-8 text-center text-[#00D4FF] tracking-wide">
           RONIX
         </h1>
 
@@ -153,4 +148,3 @@ const Home = () => {
 };
 
 export default Home;
-      

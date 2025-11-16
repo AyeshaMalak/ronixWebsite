@@ -20,7 +20,7 @@ const Login = () => {
       <div className="bg-white shadow-lg rounded-2xl w-full max-w-md p-10">
         {/* Top Icon */}
         <div className="flex justify-center mb-6">
-          <MdLogin className="text-6xl text-[#28a0f0]" />
+          <MdLogin className="text-6xl bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent" />
         </div>
 
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
@@ -29,7 +29,7 @@ const Login = () => {
 
         <form className="space-y-6" onSubmit={handleLogin}>
           {/* Username Field */}
-          <div className="flex items-center border-b-2 border-gray-200 focus-within:border-[#28a0f0] transition-colors py-3 px-3 rounded-md bg-gray-50">
+          <div className="flex items-center border-b-2 border-gray-200 focus-within:border-[#00D4FF] transition-colors py-3 px-3 rounded-md bg-gray-50">
             <FaUserAlt className="text-gray-400 mr-3 text-lg" />
             <input
               type="text"
@@ -41,7 +41,7 @@ const Login = () => {
           </div>
 
           {/* Password Field */}
-          <div className="flex items-center border-b-2 border-gray-200 focus-within:border-[#28a0f0] transition-colors py-3 px-3 rounded-md bg-gray-50">
+          <div className="flex items-center border-b-2 border-gray-200 focus-within:border-[#00D4FF] transition-colors py-3 px-3 rounded-md bg-gray-50">
             <FaLock className="text-gray-400 mr-3 text-lg" />
             <input
               type="password"
@@ -55,7 +55,7 @@ const Login = () => {
           {/* Login Button */}
           <button
             type="submit"
-            className="w-full py-3 rounded-full text-white font-semibold bg-gradient-to-b from-[#A4E6F8] to-[#28a0f0] hover:from-[#28a0f0] hover:to-[#A4E6F8] transition-all flex justify-center items-center gap-2 text-lg shadow-md"
+            className="w-full py-3 rounded-full font-semibold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] hover:from-[#0084FF] hover:to-[#00D4FF] transition-all flex justify-center items-center gap-2 text-lg text-white shadow-md"
           >
             <MdLogin /> Login
           </button>
@@ -65,7 +65,7 @@ const Login = () => {
           Don't have an account?{" "}
           <Link
             to="/signup"
-            className="text-blue-500 font-semibold hover:underline"
+            className="font-semibold bg-gradient-to-b from-[#00D4FF] to-[#0084FF] bg-clip-text text-transparent hover:text-black"
           >
             Sign Up
           </Link>
@@ -76,4 +76,3 @@ const Login = () => {
 };
 
 export default Login;
-

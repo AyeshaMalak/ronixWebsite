@@ -1,11 +1,9 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Design = () => {
   return (
     <div className="bg-white min-h-screen font-sans relative">
-      
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <Link to="/home">
@@ -20,7 +18,6 @@ const Design = () => {
 
       <div className="h-24"></div>
 
-      {/* Sections */}
       <div className="space-y-12 px-6 md:px-24 pb-20">
         <div className="bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8 mt-18">
           <div className="md:w-1/2">

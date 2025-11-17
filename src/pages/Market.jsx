@@ -5,26 +5,28 @@ const Market = () => {
   return (
     <div className="relative bg-white min-h-screen font-sans">
 
-      <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
+  
+      <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1.5 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <Link to="/home">
-            <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-30 object-contain cursor-pointer" />
+            <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-24 object-contain cursor-pointer" />
           </Link>
         </div>
       </div>
 
-      <div className="h-28"></div>
+
+      <div className="h-32"></div>
 
       <div className="space-y-12 px-6 md:px-24 pb-20">
 
-        {/* First Section with Cyan Heading */}
-        <div className="bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8 mt-10">
+      
+        <div className="bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2">
-            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-snug text-[#00D4FF]">
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-4 leading-snug text-[#00D4FF]">
               Digital Media Marketing
             </h2>
             <p className="text-black leading-relaxed text-lg">
-              RONIX offers complete Digital Media Marketing services to help your business reach potential clients effectively.
+              RONIX offers complete Digital Media Marketing services to help your business reach potential clients effectively. We focus on strategy, content, and engagement for maximum results.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center">
@@ -36,31 +38,24 @@ const Market = () => {
           </div>
         </div>
 
-        {/* Other Sections with Black Headings */}
+        {/* Section 2 */}
         <Section
           title="Search Engine Optimization"
-          text="SEO plays a key role in Google ranking. RONIX helps bring your website to the top rank and drives relevant traffic..."
+          text="SEO plays a key role in Google ranking. We help your website reach top positions and drive relevant traffic efficiently."
         />
+
+        {/* Section 3 */}
         <Section
-          title="Our Strategy"
-          text="We develop strategies to maximize your website’s potential, ensuring maximum online exposure globally..."
+          title="Marketing Strategy"
+          text="We develop tailored strategies to maximize your online presence and exposure, ensuring your brand reaches the right audience."
         />
-        <Section
-          title="Mobile Search Optimization"
-          text="With the growing use of smartphones, optimizing your website for mobile users is crucial..."
-        />
-        <Section
-          title="Genuine SEO Methods"
-          text="We implement ethical SEO practices that help search engines understand your brand..."
-        />
+
+        {/* Section 4 */}
         <Section
           title="Pay-Per-Click Management"
-          text="PPC provides instant traffic and targeted audience reach. RONIX manages your campaigns strategically..."
+          text="PPC campaigns provide instant traffic and targeted reach. We manage campaigns strategically to optimize conversions and ROI."
         />
-        <Section
-          title="Marketing Campaigns"
-          text="We help target your campaigns based on user interests, search behavior, and demographics..."
-        />
+
       </div>
     </div>
   );
@@ -68,7 +63,7 @@ const Market = () => {
 
 const Section = ({ title, text }) => (
   <div className="bg-gray-100 p-8 rounded-lg shadow-md">
-    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-black">{title}</h2>
+    <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-black">{title}</h2>
     <p className="text-gray-800 leading-relaxed text-lg">{text}</p>
   </div>
 );

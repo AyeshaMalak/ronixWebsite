@@ -4,29 +4,29 @@ import { Link } from "react-router-dom";
 const Design = () => {
   return (
     <div className="bg-white min-h-screen font-sans relative">
-      <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
+ 
+      <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1.5 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <Link to="/home">
             <img
               src="/logo.jpeg"
               alt="RONIX Logo"
-              className="h-16 sm:h-30 object-contain cursor-pointer"
+              className="h-16 sm:h-24 object-contain cursor-pointer"
             />
           </Link>
         </div>
       </div>
 
-      <div className="h-24"></div>
+      <div className="h-32"></div>
 
-      <div className="space-y-12 px-6 md:px-24 pb-20">
-        {/* First Section with Cyan Heading */}
-        <div className="bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8 mt-10">
+      <div className="space-y-12 px-6 md:px-24 pb-20">       
+        <div className="bg-gray-100 p-8 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2">
-            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 leading-snug text-[#00D4FF]">
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-4 leading-snug text-[#00D4FF]">
               Brand Identity
             </h2>
             <p className="text-black leading-relaxed text-lg">
-              We create strong brand identities that elevate your business globally. Clear and memorable designs for maximum impact.
+              We create strong brand identities that elevate your business globally. Clear and memorable designs for maximum impact. Each element reflects your brand’s essence.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center">
@@ -38,38 +38,22 @@ const Design = () => {
           </div>
         </div>
 
-        {/* Other Sections with Black Headings */}
-        <Section
-          title="Brand Guidelines"
-          text="Every brand is unique. We carefully choose colors and fonts for consistency."
-        />
-        <Section
-          title="Brand Reputation"
-          text="We maintain your brand reputation professionally and effectively."
-        />
+        {/* Section 2 */}
         <Section
           title="Logo Design"
-          text="Our designers craft logos that perfectly reflect your brand."
+          text="Our designers craft logos that perfectly reflect your brand. Simple, unique, and memorable designs for instant recognition."
         />
+
+        {/* Section 3 */}
         <Section
-          title="Business Cards"
-          text="Professional cards that leave a lasting impression on clients."
+          title="Brand Guidelines"
+          text="We carefully choose colors, fonts, and visual styles. Every choice ensures your brand looks consistent and professional across all platforms."
         />
-        <Section
-          title="Brochures and Flyers Design"
-          text="We create engaging brochures and flyers to attract customers."
-        />
-        <Section
-          title="Stationery Design"
-          text="Custom stationery that strengthens your brand identity."
-        />
+
+        {/* Section 4 */}
         <Section
           title="Social Media Branding"
-          text="Enhancing your social media presence with creative branding."
-        />
-        <Section
-          title="Infographics"
-          text="Eye-catching infographics to simplify and promote your data."
+          text="Enhancing your social media presence with creative branding. Engaging visuals and cohesive style help your brand connect with the audience."
         />
       </div>
     </div>
@@ -78,7 +62,7 @@ const Design = () => {
 
 const Section = ({ title, text }) => (
   <div className="bg-gray-100 p-8 rounded-lg shadow-md">
-    <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-black">{title}</h2>
+    <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-black">{title}</h2>
     <p className="text-gray-800 leading-relaxed text-lg">{text}</p>
   </div>
 );

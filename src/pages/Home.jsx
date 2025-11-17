@@ -5,7 +5,9 @@ import { ArrowDown } from "lucide-react";
 const Section = ({ id, title, text, img, reverse }) => (
   <section
     id={id}
-    className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
+    className={`flex flex-col ${
+      reverse ? "md:flex-row-reverse" : "md:flex-row"
+    } items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
   >
     <div className="md:w-1/2 text-center md:text-left">
       <h2 className="text-4xl font-extrabold mb-4 text-[#00D4FF] tracking-wide">
@@ -34,7 +36,10 @@ const SideScroller = () => {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          if (
+            rect.top <= window.innerHeight / 2 &&
+            rect.bottom >= window.innerHeight / 2
+          ) {
             setActive(id);
           }
         }
@@ -67,12 +72,14 @@ const Home = () => {
     <div className="relative">
       <SideScroller />
 
+      {/* Header */}
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1.5 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-24 object-contain" />
         </div>
       </div>
 
+      {/* HOME SECTION */}
       <section
         id="home"
         className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50"
@@ -101,32 +108,25 @@ const Home = () => {
           <ArrowDown className="mt-3 h-5 w-5 animate-bounce text-[#00D4FF]" />
         </div>
 
-        <div
-  className="fixed left-2 md:left-10 top-[45%] -translate-y-1/2 
-             flex-col gap-12 md:gap-10 px-2 py-4 rounded-md 
-             z-40 hidden sm:flex text-black pointer-events-auto"
->
-  <Link
-    to="/portfolio"
-    className="font-extrabold text-xs md:text-xl uppercase 
-               [writing-mode:vertical-lr] rotate-180 hover:text-[#0084FF] 
-               transition-colors"
-  >
-    PORTFOLIO
-  </Link>
+        {/* LEFT VERTICAL LINKS */}
+        <div className="fixed left-2 md:left-10 top-[45%] -translate-y-1/2 flex-col gap-12 md:gap-10 px-2 py-4 rounded-md z-40 hidden sm:flex text-black pointer-events-auto">
+          <Link
+            to="/portfolio"
+            className="font-extrabold text-xs md:text-xl uppercase writing-mode-vertical-lr rotate-180 hover:text-[#0084FF] transition-colors"
+          >
+            PORTFOLIO
+          </Link>
 
-  <Link
-    to="/contact"
-    className="font-extrabold text-xs md:text-xl uppercase 
-               [writing-mode:vertical-lr] rotate-180 hover:text-[#0084FF] 
-               transition-colors"
-  >
-    CONTACT
-  </Link>
-</div>
-        
+          <Link
+            to="/contact"
+            className="font-extrabold text-xs md:text-xl uppercase writing-mode-vertical-lr rotate-180 hover:text-[#0084FF] transition-colors"
+          >
+            CONTACT
+          </Link>
+        </div>
       </section>
 
+      {/* SECTION 1 */}
       <Section
         id="section1"
         title="Our Design Expertise"
@@ -134,6 +134,7 @@ const Home = () => {
         img="/image1.png"
       />
 
+      {/* SECTION 2 */}
       <Section
         id="section2"
         title="Development Solutions"
@@ -142,6 +143,7 @@ const Home = () => {
         reverse
       />
 
+      {/* SECTION 3 */}
       <Section
         id="section3"
         title="Marketing Strategies"
@@ -149,6 +151,7 @@ const Home = () => {
         img="/image3.png"
       />
 
+      {/* MOBILE BOTTOM MENU */}
       <div className="sm:hidden fixed bottom-0 left-0 right-0 bg-white flex justify-around py-4 z-50 text-black">
         <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#0084FF] transition-colors">PORTFOLIO</Link>
         <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#0084FF] transition-colors">CONTACT</Link>
@@ -158,7 +161,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-

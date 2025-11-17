@@ -5,24 +5,32 @@ const Contact = () => {
   return (
     <div className="relative bg-white min-h-screen">
 
+  
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1.5 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
-          <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-24 object-contain" />
+          <Link to="/home">
+            <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-24 object-contain cursor-pointer" />
+          </Link>
         </div>
       </div>
 
-      <section className="bg-gray-100 flex flex-col justify-center items-center text-center py-20 px-6 md:px-12 mt-24">
+    
+      <div className="h-32"></div>
+
+   
+      <section className="bg-gray-100 flex flex-col justify-center items-center text-center py-20 px-6 md:px-12">
         <h1 className="text-4xl font-bold mb-2 text-gray-800">Contact</h1>
         <p className="italic text-gray-500">
           Whether it's a project or just a cup of coffee!
         </p>
       </section>
 
+      {/* Forms Section */}
       <div className="max-w-[95rem] mx-auto grid md:grid-cols-2 gap-8 px-6 pb-20 pt-12">
 
+        {/* Get a Quote Form */}
         <div className="bg-gray-100 p-10 shadow-sm rounded-lg">
           <h2 className="text-3xl font-extrabold mb-6">Get a Quote</h2>
-
           <form className="space-y-5">
             <div className="flex gap-4">
               <input
@@ -69,9 +77,9 @@ const Contact = () => {
           </form>
         </div>
 
+        {/* Befriend Form */}
         <div className="bg-gray-100 p-10 shadow-sm rounded-lg">
           <h2 className="text-3xl font-extrabold mb-6">Befriend</h2>
-
           <form className="space-y-5">
             <input
               type="email"
@@ -94,7 +102,6 @@ const Contact = () => {
           </p>
         </div>
       </div>
-
     </div>
   );
 };

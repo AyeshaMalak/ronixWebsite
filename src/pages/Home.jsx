@@ -1,7 +1,5 @@
 import { useNavigate, Link } from "react-router-dom";
 import { ArrowDown } from "lucide-react";
-
-
 import SideScroller from "../components/SideScroller";
 import SideTextSidebar from "../components/SideTextSidebar";
 
@@ -118,3 +116,4 @@ const Home = () => {
 };
 
 export default Home;
+

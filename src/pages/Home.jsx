@@ -15,7 +15,7 @@ const Section = ({ id, title, text, img, reverse, moreLink, moreText }) => (
         <div className="mt-4">
           <button
             onClick={moreLink}
-            className="font-bold text-[#0084FF] hover:text-[#00D4FF] transition-colors text-lg"
+            className="font-bold text-black hover:text-gray-700 transition-colors text-lg"
           >
             {moreText}
           </button>
@@ -80,7 +80,7 @@ const Home = () => {
       </div>
 
       {/* LEFT VERTICAL LINKS */}
-      <div className="fixed left-2 md:left-10 top-1/2 -translate-y-1/2 flex flex-col gap-6 z-40 hidden sm:flex">
+      <div className="hidden sm:flex flex-col gap-6 left-2 md:left-10 top-32 sticky z-40">
         <Link
           to="/portfolio"
           className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
@@ -154,7 +154,7 @@ const Home = () => {
         title="Marketing Strategies"
         text="Our marketing solutions help your business reach the right audience effectively. We create data-driven campaigns, optimize social media, and analyze trends to boost engagement. With strategic planning, we aim to increase brand awareness and generate measurable results for your business."
         img="/image3.png"
-        // optional: add moreLink={() => navigate("/market")} moreText="More >"
+       
       />
 
       {/* MOBILE BOTTOM MENU */}

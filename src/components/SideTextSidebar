@@ -1,0 +1,33 @@
+import { Link } from "react-router-dom";
+
+const SideTextSidebar = () => {
+  return (
+    <div
+      className="fixed left-2 md:left-10 flex flex-col gap-6 z-50"
+      style={{
+        top: "50%",
+        transform: "translateY(-50%)",
+        maxHeight: "calc(100vh - 200px)", // dynamically stop above footer
+        overflow: "hidden",
+      }}
+    >
+      <Link
+        to="/portfolio"
+        className="text-black hover:text-cyan-500 transition-colors uppercase tracking-widest"
+        style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+      >
+        PORTFOLIO
+      </Link>
+
+      <Link
+        to="/contact"
+        className="text-black hover:text-cyan-500 transition-colors uppercase tracking-widest mt-4"
+        style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+      >
+        CONTACT
+      </Link>
+    </div>
+  );
+};
+
+export default SideTextSidebar;

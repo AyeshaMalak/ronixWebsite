@@ -42,29 +42,29 @@ const Portfolio = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
 
-      
-      <div className="fixed top-0 left-0 right-0 w-full bg-white px-6 py-4 shadow-md z-50">
+    
+      <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1.5 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <Link to="/home">
             <img
               src="/logo.jpeg"
               alt="RONIX Logo"
-              className="h-16 sm:h-30 object-contain cursor-pointer"
+              className="h-16 sm:h-24 object-contain cursor-pointer"
             />
           </Link>
         </div>
       </div>
 
+    
       <div className="h-32"></div>
 
       <div className="px-6 md:px-24 py-10">
 
-        {/* Section Heading */}
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-center text-[#19D3FF] m-10">
+      
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-center text-[#19D3FF]">
           Our Work
         </h1>
 
-        {/* Portfolio Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {portfolioItems.map((item) => (
             <div

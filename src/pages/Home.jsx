@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowDown } from "lucide-react";
 
-const Section = ({ id, title, text, img, reverse }) => (
+const Section = ({ id, title, text, img, reverse, moreLink, moreText }) => (
   <section
     id={id}
     className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
@@ -10,7 +10,19 @@ const Section = ({ id, title, text, img, reverse }) => (
     <div className="md:w-1/2 text-center md:text-left">
       <h2 className="text-4xl font-extrabold mb-4 text-[#00D4FF] tracking-wide">{title}</h2>
       <p className="text-lg leading-relaxed text-gray-700">{text}</p>
+
+      {moreLink && moreText && (
+        <div className="mt-4">
+          <button
+            onClick={moreLink}
+            className="font-bold text-[#0084FF] hover:text-[#00D4FF] transition-colors text-lg"
+          >
+            {moreText}
+          </button>
+        </div>
+      )}
     </div>
+
     <div className="md:w-1/2 flex justify-center">
       <img src={img} alt={title} className="rounded-lg max-h-80 w-full object-cover" />
     </div>
@@ -121,17 +133,9 @@ const Home = () => {
         title="Our Design Expertise"
         text="We create stunning visual designs that elevate your brand and leave a lasting impression. Our team focuses on unique concepts, color schemes, and layouts that make your brand stand out. Every design is tailored to reflect your brand’s personality and vision."
         img="/image1.png"
+        moreLink={() => navigate("/design")}
+        moreText="More >"
       />
-
-      {/* More button below Section 1 */}
-      <div className="flex justify-center mt-6">
-        <button
-          onClick={() => navigate("/design")}
-          className="font-bold text-[#0084FF] hover:text-[#00D4FF] transition-colors text-lg"
-        >
-          More &gt;
-        </button>
-      </div>
 
       {/* SECTION 2 */}
       <Section
@@ -140,6 +144,8 @@ const Home = () => {
         text="We build robust, scalable applications with modern technology stacks. Our developers ensure clean code, responsive design, and seamless user experiences. From web apps to mobile platforms, we create solutions that meet your business needs and future growth."
         img="/image2.png"
         reverse
+        moreLink={() => navigate("/develop")}
+        moreText="More >"
       />
 
       {/* SECTION 3 */}
@@ -148,6 +154,7 @@ const Home = () => {
         title="Marketing Strategies"
         text="Our marketing solutions help your business reach the right audience effectively. We create data-driven campaigns, optimize social media, and analyze trends to boost engagement. With strategic planning, we aim to increase brand awareness and generate measurable results for your business."
         img="/image3.png"
+        // optional: add moreLink={() => navigate("/market")} moreText="More >"
       />
 
       {/* MOBILE BOTTOM MENU */}

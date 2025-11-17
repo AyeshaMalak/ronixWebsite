@@ -72,17 +72,20 @@ const Home = () => {
     <div className="relative">
       <SideScroller />
 
-      {/* HEADER */}
+    
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1.5 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-24 object-contain" />
         </div>
       </div>
-
- 
-    <div
+  <div
   className="hidden sm:flex flex-col gap-6 left-2 md:left-10 fixed z-40"
-  style={{ top: "50%", transform: "translateY(-50%)", maxHeight: "calc(100vh - 100px)" }}
+  style={{
+    top: "50%", 
+    transform: "translateY(-50%)", 
+    maxHeight: "calc(100vh - 120px)", 
+    justifyContent: "center",
+  }}
 >
   <Link
     to="/portfolio"
@@ -99,6 +102,10 @@ const Home = () => {
     CONTACT
   </Link>
 </div>
+
+ 
+
+ 
 
   
       <section
@@ -170,4 +177,5 @@ const Home = () => {
 };
 
 export default Home;
+
 

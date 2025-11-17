@@ -1,28 +1,55 @@
 import { useNavigate, Link } from "react-router-dom";
 import { ArrowDown } from "lucide-react";
 
-import Section from "../components/Section";
+
 import SideScroller from "../components/SideScroller";
 import SideTextSidebar from "../components/SideTextSidebar";
+
+const Section = ({ id, title, text, img, reverse, moreLink, moreText }) => (
+  <section
+    id={id}
+    className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
+  >
+    <div className="md:w-1/2 text-center md:text-left">
+      <h2 className="text-4xl font-extrabold mb-4 text-[#00D4FF] tracking-wide">{title}</h2>
+      <p className="text-lg leading-relaxed text-gray-700">{text}</p>
+
+      {moreLink && moreText && (
+        <div className="mt-4">
+          <button
+            onClick={moreLink}
+            className="font-bold text-black hover:text-gray-700 transition-colors text-lg"
+          >
+            {moreText}
+          </button>
+        </div>
+      )}
+    </div>
+
+    <div className="md:w-1/2 flex justify-center">
+      <img src={img} alt={title} className="rounded-lg max-h-80 w-full object-cover" />
+    </div>
+  </section>
+);
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
     <div className="relative">
-
-     
+      {/* Side scroll indicators */}
       <SideScroller />
 
-     
+      {/* Header */}
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1.5 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-24 object-contain" />
         </div>
       </div>
 
+      {/* Vertical sidebar links */}
       <SideTextSidebar />
-
+    
       <section
         id="home"
         className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50"
@@ -86,10 +113,8 @@ const Home = () => {
         <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#0084FF] transition-colors">PORTFOLIO</Link>
         <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#0084FF] transition-colors">CONTACT</Link>
       </div>
-
     </div>
   );
 };
 
 export default Home;
-

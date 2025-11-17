@@ -123,6 +123,16 @@ const Home = () => {
         img="/image1.png"
       />
 
+      {/* More button below Section 1 */}
+      <div className="flex justify-center mt-6">
+        <button
+          onClick={() => navigate("/design")}
+          className="font-bold text-[#0084FF] hover:text-[#00D4FF] transition-colors text-lg"
+        >
+          More &gt;
+        </button>
+      </div>
+
       {/* SECTION 2 */}
       <Section
         id="section2"

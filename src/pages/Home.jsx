@@ -5,23 +5,14 @@ import { ArrowDown } from "lucide-react";
 const Section = ({ id, title, text, img, reverse }) => (
   <section
     id={id}
-    className={`flex flex-col ${
-      reverse ? "md:flex-row-reverse" : "md:flex-row"
-    } items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
+    className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
   >
     <div className="md:w-1/2 text-center md:text-left">
-      <h2 className="text-4xl font-extrabold mb-4 text-[#00D4FF] tracking-wide">
-        {title}
-      </h2>
+      <h2 className="text-4xl font-extrabold mb-4 text-[#00D4FF] tracking-wide">{title}</h2>
       <p className="text-lg leading-relaxed text-gray-700">{text}</p>
     </div>
-
     <div className="md:w-1/2 flex justify-center">
-      <img
-        src={img}
-        alt={title}
-        className="rounded-lg max-h-80 w-full object-cover"
-      />
+      <img src={img} alt={title} className="rounded-lg max-h-80 w-full object-cover" />
     </div>
   </section>
 );
@@ -36,10 +27,7 @@ const SideScroller = () => {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          if (
-            rect.top <= window.innerHeight / 2 &&
-            rect.bottom >= window.innerHeight / 2
-          ) {
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
             setActive(id);
           }
         }
@@ -72,11 +60,29 @@ const Home = () => {
     <div className="relative">
       <SideScroller />
 
-      {/* Header */}
+      {/* HEADER */}
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1.5 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-24 object-contain" />
         </div>
+      </div>
+
+      {/* LEFT VERTICAL LINKS */}
+      <div className="fixed left-2 md:left-10 top-1/2 -translate-y-1/2 flex flex-col gap-6 z-40 hidden sm:flex">
+        <Link
+          to="/portfolio"
+          className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          PORTFOLIO
+        </Link>
+        <Link
+          to="/contact"
+          className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          CONTACT
+        </Link>
       </div>
 
       {/* HOME SECTION */}
@@ -106,23 +112,6 @@ const Home = () => {
         >
           <span className="font-bold">FEATURED WORK</span>
           <ArrowDown className="mt-3 h-5 w-5 animate-bounce text-[#00D4FF]" />
-        </div>
-
-        {/* LEFT VERTICAL LINKS */}
-        <div className="fixed left-2 md:left-10 top-[45%] -translate-y-1/2 flex-col gap-12 md:gap-10 px-2 py-4 rounded-md z-40 hidden sm:flex text-black pointer-events-auto">
-          <Link
-            to="/portfolio"
-            className="font-extrabold text-xs md:text-xl uppercase writing-mode-vertical-lr rotate-180 hover:text-[#0084FF] transition-colors"
-          >
-            PORTFOLIO
-          </Link>
-
-          <Link
-            to="/contact"
-            className="font-extrabold text-xs md:text-xl uppercase writing-mode-vertical-lr rotate-180 hover:text-[#0084FF] transition-colors"
-          >
-            CONTACT
-          </Link>
         </div>
       </section>
 

@@ -79,25 +79,28 @@ const Home = () => {
         </div>
       </div>
 
-      {/* LEFT VERTICAL LINKS */}
-      <div className="hidden sm:flex flex-col gap-6 left-2 md:left-10 top-32 sticky z-40">
-        <Link
-          to="/portfolio"
-          className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
-          style={{ writingMode: "vertical-rl" }}
-        >
-          PORTFOLIO
-        </Link>
-        <Link
-          to="/contact"
-          className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
-          style={{ writingMode: "vertical-rl" }}
-        >
-          CONTACT
-        </Link>
-      </div>
+ 
+    <div
+  className="hidden sm:flex flex-col gap-6 left-2 md:left-10 fixed z-40"
+  style={{ top: "50%", transform: "translateY(-50%)", maxHeight: "calc(100vh - 100px)" }}
+>
+  <Link
+    to="/portfolio"
+    className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
+    style={{ writingMode: "vertical-rl" }}
+  >
+    PORTFOLIO
+  </Link>
+  <Link
+    to="/contact"
+    className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
+    style={{ writingMode: "vertical-rl" }}
+  >
+    CONTACT
+  </Link>
+</div>
 
-      {/* HOME SECTION */}
+  
       <section
         id="home"
         className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50"
@@ -167,3 +170,4 @@ const Home = () => {
 };
 
 export default Home;
+

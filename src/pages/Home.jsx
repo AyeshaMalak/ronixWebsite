@@ -101,20 +101,30 @@ const Home = () => {
           <ArrowDown className="mt-3 h-5 w-5 animate-bounce text-[#00D4FF]" />
         </div>
 
-        <div className="fixed left-2 md:left-10 top-1/2 -translate-y-1/2 flex-col gap-12 md:gap-10 px-2 py-4 rounded-md z-50 hidden sm:flex text-black">
-          <Link
-            to="/portfolio"
-            className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#0084FF] transition-colors"
-          >
-            PORTFOLIO
-          </Link>
-          <Link
-            to="/contact"
-            className="font-extrabold text-xs md:text-xl uppercase [writing-mode:vertical-lr] rotate-180 hover:text-[#0084FF] transition-colors"
-          >
-            CONTACT
-          </Link>
-        </div>
+        <div
+  className="fixed left-2 md:left-10 top-[45%] -translate-y-1/2 
+             flex-col gap-12 md:gap-10 px-2 py-4 rounded-md 
+             z-40 hidden sm:flex text-black pointer-events-auto"
+>
+  <Link
+    to="/portfolio"
+    className="font-extrabold text-xs md:text-xl uppercase 
+               [writing-mode:vertical-lr] rotate-180 hover:text-[#0084FF] 
+               transition-colors"
+  >
+    PORTFOLIO
+  </Link>
+
+  <Link
+    to="/contact"
+    className="font-extrabold text-xs md:text-xl uppercase 
+               [writing-mode:vertical-lr] rotate-180 hover:text-[#0084FF] 
+               transition-colors"
+  >
+    CONTACT
+  </Link>
+</div>
+        
       </section>
 
       <Section
@@ -148,6 +158,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 

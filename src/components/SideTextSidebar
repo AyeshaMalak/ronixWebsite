@@ -3,26 +3,26 @@ import { Link } from "react-router-dom";
 const SideTextSidebar = () => {
   return (
     <div
-      className="fixed left-2 md:left-10 flex flex-col gap-6 z-50"
+      className="hidden sm:flex flex-col gap-6 left-2 md:left-10 fixed z-40"
       style={{
         top: "50%",
         transform: "translateY(-50%)",
-        maxHeight: "calc(100vh - 200px)", // dynamically stop above footer
-        overflow: "hidden",
+        maxHeight: "calc(100vh - 120px)", // stops above footer
+        justifyContent: "center",
       }}
     >
       <Link
         to="/portfolio"
-        className="text-black hover:text-cyan-500 transition-colors uppercase tracking-widest"
-        style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+        className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
+        style={{ writingMode: "vertical-rl" }}
       >
         PORTFOLIO
       </Link>
 
       <Link
         to="/contact"
-        className="text-black hover:text-cyan-500 transition-colors uppercase tracking-widest mt-4"
-        style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+        className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
+        style={{ writingMode: "vertical-rl" }}
       >
         CONTACT
       </Link>

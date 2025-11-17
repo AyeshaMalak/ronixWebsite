@@ -1,113 +1,28 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ArrowDown } from "lucide-react";
 
-const Section = ({ id, title, text, img, reverse, moreLink, moreText }) => (
-  <section
-    id={id}
-    className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between max-w-7xl mx-auto my-20 px-6 py-12 bg-gray-100 rounded-xl gap-8`}
-  >
-    <div className="md:w-1/2 text-center md:text-left">
-      <h2 className="text-4xl font-extrabold mb-4 text-[#00D4FF] tracking-wide">{title}</h2>
-      <p className="text-lg leading-relaxed text-gray-700">{text}</p>
-
-      {moreLink && moreText && (
-        <div className="mt-4">
-          <button
-            onClick={moreLink}
-            className="font-bold text-black hover:text-gray-700 transition-colors text-lg"
-          >
-            {moreText}
-          </button>
-        </div>
-      )}
-    </div>
-
-    <div className="md:w-1/2 flex justify-center">
-      <img src={img} alt={title} className="rounded-lg max-h-80 w-full object-cover" />
-    </div>
-  </section>
-);
-
-const SideScroller = () => {
-  const sections = ["home", "section1", "section2", "section3"];
-  const [active, setActive] = useState("home");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      sections.forEach((id) => {
-        const section = document.getElementById(id);
-        if (section) {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            setActive(id);
-          }
-        }
-      });
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <div className="fixed right-8 top-1/2 -translate-y-1/2 flex-col gap-4 z-50 hidden md:flex">
-      {sections.map((id) => (
-        <a
-          key={id}
-          href={`#${id}`}
-          className={`w-3 h-3 rounded-full border-2 border-[#0084FF] transition-all duration-300 ${
-            active === id ? "bg-[#0084FF] scale-125" : "bg-white hover:bg-[#19D3FF]"
-          }`}
-          aria-label={`Navigate to ${id}`}
-        />
-      ))}
-    </div>
-  );
-};
+import Section from "../components/Section";
+import SideScroller from "../components/SideScroller";
+import SideTextSidebar from "../components/SideTextSidebar";
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
     <div className="relative">
+
+     
       <SideScroller />
 
-    
+     
       <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1.5 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex justify-center items-center">
           <img src="/logo.jpeg" alt="RONIX Logo" className="h-16 sm:h-24 object-contain" />
         </div>
       </div>
-  <div
-  className="hidden sm:flex flex-col gap-6 left-2 md:left-10 fixed z-40"
-  style={{
-    top: "50%", 
-    transform: "translateY(-50%)", 
-    maxHeight: "calc(100vh - 120px)", 
-    justifyContent: "center",
-  }}
->
-  <Link
-    to="/portfolio"
-    className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
-    style={{ writingMode: "vertical-rl" }}
-  >
-    PORTFOLIO
-  </Link>
-  <Link
-    to="/contact"
-    className="font-extrabold text-xs md:text-xl uppercase transform rotate-180 hover:text-[#0084FF] transition-colors"
-    style={{ writingMode: "vertical-rl" }}
-  >
-    CONTACT
-  </Link>
-</div>
 
- 
+      <SideTextSidebar />
 
- 
-
-  
       <section
         id="home"
         className="relative flex flex-col items-center justify-center min-h-screen px-6 py-16 pt-32 bg-gray-50"
@@ -164,18 +79,16 @@ const Home = () => {
         title="Marketing Strategies"
         text="Our marketing solutions help your business reach the right audience effectively. We create data-driven campaigns, optimize social media, and analyze trends to boost engagement. With strategic planning, we aim to increase brand awareness and generate measurable results for your business."
         img="/image3.png"
-       
       />
 
-      {/* MOBILE BOTTOM MENU */}
+      {/* Mobile bottom menu */}
       <div className="sm:hidden fixed bottom-0 left-0 right-0 bg-white flex justify-around py-4 z-50 text-black">
         <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#0084FF] transition-colors">PORTFOLIO</Link>
         <Link to="/contact" className="font-extrabold text-sm uppercase hover:text-[#0084FF] transition-colors">CONTACT</Link>
       </div>
+
     </div>
   );
 };
 
 export default Home;
-
-
